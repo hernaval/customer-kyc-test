@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: processing-service
+  config:
+    import:    "configserver:http://localhost:8088"
+
+

@@ -1,0 +1,24 @@
+server: 
+  port: 8060
+  
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      mvc:
+        routes:
+         - id: onboarding-service
+           uri: lb://onboarding-service
+           predicates:
+            - Path= /customers/**
+         - id: processing-service
+           uri: lb://processing-service
+           predicates:
+            - Path= /processing/**
+    
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

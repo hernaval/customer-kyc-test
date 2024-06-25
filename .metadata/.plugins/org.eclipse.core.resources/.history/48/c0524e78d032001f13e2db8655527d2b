@@ -1,0 +1,9 @@
+package com.testapp.onboarding_service.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RequestMapping("/customers")
+public class CustomerController {
+
+	
+}
