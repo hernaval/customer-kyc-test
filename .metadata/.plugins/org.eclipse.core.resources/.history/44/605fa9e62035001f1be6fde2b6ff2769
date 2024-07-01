@@ -1,0 +1,21 @@
+package com.testapp.onboarding_service.model;
+
+public class Customer {
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String purpose;
+    private String companyName;
+    private String entityType;
+    private String businessActivity;
+    private String licenseRequirements;
+    private String countryOfIncorporation;
+    private String registrationNumber;
+    private LocalDate incorporationDate;
+    private String directorName;
+    private String directorPassportNumber;
+    private String applicantName;
+    private String emailAddress;
+}

@@ -1,0 +1,5 @@
+package com.testapp.onboarding_service.service;
+
+public class CustomerApplicationService {
+
+}

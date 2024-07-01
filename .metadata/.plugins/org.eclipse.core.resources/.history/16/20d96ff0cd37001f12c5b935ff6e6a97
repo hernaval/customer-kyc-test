@@ -1,0 +1,66 @@
+package com.testapp.onboarding_service.model;
+
+import java.time.Instant;
+import java.time.LocalDate;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+
+@Entity
+public class CustomerApplication {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private String purpose;
+	private String companyName;
+	private String entityType;
+	private String businessActivity;
+	private String licenseRequirements;
+	private String countryOfIncorporation;
+	private String registrationNumber;
+	@Temporal(TemporalType.DATE)
+	private LocalDate incorporationDate;
+	private String directorName;
+	private String directorPassportNumber;
+	private String applicantName;
+	private String emailAddress;
+	@CreationTimestamp
+	private Instant createdAt;
+	@UpdateTimestamp
+	private Instant updatedAt;
+	
+	
+	public CustomerApplication() {
+		super();
+	}
+
+	public CustomerApplication(Long id, String purpose, String companyName, String entityType, String businessActivity,
+			String licenseRequirements, String countryOfIncorporation, String registrationNumber,
+			LocalDate incorporationDate, String directorName, String directorPassportNumber, String applicantName,
+			String emailAddress) {
+		this.id = id;
+		this.purpose = purpose;
+		this.companyName = companyName;
+		this.entityType = entityType;
+		this.businessActivity = businessActivity;
+		this.licenseRequirements = licenseRequirements;
+		this.countryOfIncorporation = countryOfIncorporation;
+		this.registrationNumber = registrationNumber;
+		this.incorporationDate = incorporationDate;
+		this.directorName = directorName;
+		this.directorPassportNumber = directorPassportNumber;
+		this.applicantName = applicantName;
+		this.emailAddress = emailAddress;
+	}
+
+	
+}

@@ -1,0 +1,5 @@
+package com.testapp.onboarding_service;
+
+public interface StorageService {
+	void saveAll();
+}

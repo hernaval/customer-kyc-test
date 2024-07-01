@@ -1,0 +1,19 @@
+package com.testapp.onboarding_service.dto,
+
+import java.time.LocalDate,
+
+public record CustomerApplicationDto( 
+		String purpose,
+		String companyName,
+		String entityType,
+		String businessActivity,
+		String licenseRequirements,
+		String countryOfIncorporation,
+		String registrationNumber,
+		LocalDate incorporationDate,
+		String directorName,
+		String directorPassportNumber,
+		String applicantName,
+		String emailAddress) {
+
+}

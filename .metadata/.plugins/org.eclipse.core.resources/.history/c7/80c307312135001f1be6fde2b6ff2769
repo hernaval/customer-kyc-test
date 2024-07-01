@@ -1,0 +1,6 @@
+package com.testapp.onboarding_service.model;
+
+import java.time.LocalDate;
+
+public record CustomerApplication(Long id, String purpose, String companyName, String entityType, String businessActivity, String licenseRequirements, String countryOfIncorporation, String registrationNumber, LocalDate incorporationDate, String directorName, String directorPassportNumber, String applicantName, String emailAddress) {
+}

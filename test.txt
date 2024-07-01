@@ -3,3 +3,7 @@ https://medium.com/@belemgnegreetienne/mastering-microservices-with-spring-boot-
 https://blog.devgenius.io/microservices-part-1-with-maven-spring-boot-and-docker-4888a6bd05b5
 
 https://medium.com/javarevisited/spring-boot-authorization-creating-an-authorization-server-for-your-microservices-50a3aefd6ce8
+
+https://www.youtube.com/watch?v=5vVN45rQ3T0&list=PLkLICWfbH8QC2_FMUJFuuXK-t_IYWHkaN&index=12
+
+https://howtodoinjava.com/spring-security/spring-boot-role-based-authorization/

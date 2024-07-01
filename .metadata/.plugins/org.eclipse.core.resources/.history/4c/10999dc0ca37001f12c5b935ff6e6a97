@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: onboarding-service
+  config:
+   import:    "configserver:http://localhost:8088"
+
+  datasource:
+    url: jdbc:h2:~/onboarding
