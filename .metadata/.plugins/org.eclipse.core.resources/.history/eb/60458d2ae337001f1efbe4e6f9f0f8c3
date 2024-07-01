@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: onboarding-service
+  config:
+   import:    "configserver:http://localhost:8088"
+
+  datasource:
+    url: jdbc:h2:~/onboarding
+    driver-class-name: org.h2.Driver
+    username: onboarding
+    password: onboarding
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 1mb
+        
+    
+springdoc:
+  packages-to-scan:
+  - com.testapp.onboarding_service.controller
+  
+     

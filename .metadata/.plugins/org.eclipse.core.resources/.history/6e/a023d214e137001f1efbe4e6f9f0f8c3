@@ -1,0 +1,8 @@
+package com.testapp.onboarding_service.service;
+
+import com.testapp.onboarding_service.dto.CustomerApplicationDto;
+import com.testapp.onboarding_service.model.CustomerApplication;
+
+public interface CustomerApplicationService {
+	CustomerApplication save(CustomerApplicationDto customerApplicationDto);
+}

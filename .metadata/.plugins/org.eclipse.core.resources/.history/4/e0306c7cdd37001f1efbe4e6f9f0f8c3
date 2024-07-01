@@ -1,0 +1,13 @@
+package com.testapp.onboarding_service.service.impl;
+
+import com.testapp.onboarding_service.service.StorageService;
+
+public class LocalStorage implements StorageService{
+
+	@Override
+	public void saveFiles() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

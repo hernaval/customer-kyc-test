@@ -1,0 +1,21 @@
+package com.testapp.onboarding_service.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.testapp.onboarding_service.dto.CustomerApplicationDto;
+import com.testapp.onboarding_service.model.CustomerApplication;
+import com.testapp.onboarding_service.repository.CustomerApplicationRepository;
+import com.testapp.onboarding_service.service.CustomerApplicationService;
+
+public class CustomerApplicationImpl implements CustomerApplicationService {
+
+	@Autowired
+	private CustomerApplicationRepository repository;
+	
+	@Override
+	public CustomerApplication save(CustomerApplicationDto customerApplication) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

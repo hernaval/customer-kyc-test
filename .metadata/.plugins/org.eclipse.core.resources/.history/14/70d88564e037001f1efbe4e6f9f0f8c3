@@ -1,0 +1,11 @@
+package com.testapp.onboarding_service.mapper;
+
+import org.mapstruct.Mapper;
+
+import com.testapp.onboarding_service.dto.CustomerApplicationDto;
+import com.testapp.onboarding_service.model.CustomerApplication;
+
+@Mapper
+public interface CustomerApplicationMapper {
+	CustomerApplication dtoToEntity(CustomerApplicationDto dto);
+}

@@ -7,5 +7,5 @@ import com.testapp.onboarding_service.model.CustomerApplication;
 
 @Repository
 public interface CustomerApplicationRepository extends JpaRepository<CustomerApplication, Long>{
-
+	boolean existsByEmail(String emailAddress);
 }

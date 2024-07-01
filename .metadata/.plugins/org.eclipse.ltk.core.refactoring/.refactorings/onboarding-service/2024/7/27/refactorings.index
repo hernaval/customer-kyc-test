@@ -1,3 +1,10 @@
 1719854495030	Delete element
 1719854790161	Move compilation unit
 1719856650674	Move compilation unit
+1719861258867	Rename field 'emailAddress'
+1719861426038	Rename field 'emailAddress'
+1719863199881	Extract constant 'UPLOADS_RESOURCES_DIR'
+1719865328315	Rename field 'mapper'
+1719865725560	Delete element
+1719865900996	Delete element
+1719867626395	Delete elements

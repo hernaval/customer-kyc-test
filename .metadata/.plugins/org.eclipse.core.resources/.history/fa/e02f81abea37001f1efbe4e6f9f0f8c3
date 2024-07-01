@@ -1,0 +1,5 @@
+package com.testapp.onboarding_service.exceptions;
+
+public class CustomerApplicationNotFoundException {
+
+}

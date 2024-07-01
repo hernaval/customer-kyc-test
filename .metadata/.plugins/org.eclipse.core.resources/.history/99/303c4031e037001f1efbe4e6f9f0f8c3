@@ -1,0 +1,5 @@
+package com.testapp.onboarding_service.mapper;
+
+public class CustomerApplicationMapper {
+
+}

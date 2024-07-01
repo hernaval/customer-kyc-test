@@ -1,0 +1,16 @@
+package com.testapp.onboarding_service.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.testapp.onboarding_service.service.StorageService;
+
+@Service
+public class LocalStorage implements StorageService{
+
+	@Override
+	public void saveFiles() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

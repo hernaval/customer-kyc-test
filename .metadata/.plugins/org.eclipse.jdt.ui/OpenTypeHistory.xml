@@ -2,4 +2,5 @@
 <typeInfoHistroy>
     <typeInfo handle="=config-server/C:\/Users\/herna\/.gradle\/caches\/modules-2\/files-2.1\/org.springframework.cloud\/spring-cloud-config-server\/4.1.2\/d3ebf62cc11781625462cad7e8144ba1e96f13a0\/spring-cloud-config-server-4.1.2.jar=/gradle_used_by_scope=/main,test=/&lt;org.springframework.cloud.config.server.config(EnvironmentRepositoryConfiguration$ConfigServerActuatorConfiguration.class[ConfigServerActuatorConfiguration" modifiers="12" timestamp="1719304074012"/>
     <typeInfo handle="=config-server/src\/main\/java=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;com.testapp.config_server{ConfigServerApplication.java[ConfigServerApplication" modifiers="1" timestamp="1719304165778"/>
+    <typeInfo handle="=api-gateway/D:\/dev\/CBS\/Tools\/sts-4.22.0.RELEASE\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/&lt;java.lang(IllegalArgumentException.class[IllegalArgumentException" modifiers="33" timestamp="1713444792679"/>
 </typeInfoHistroy>

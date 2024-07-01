@@ -1,0 +1,55 @@
+package com.testapp.onboarding_service.service.impl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.testapp.onboarding_service.dto.CustomerApplicationDto;
+import com.testapp.onboarding_service.exceptions.ExistingCustomerException;
+import com.testapp.onboarding_service.mapper.CustomerApplicationMapper;
+import com.testapp.onboarding_service.model.CustomerApplication;
+import com.testapp.onboarding_service.repository.CustomerApplicationRepository;
+import com.testapp.onboarding_service.service.CustomerApplicationService;
+import com.testapp.onboarding_service.service.StorageService;
+
+import jakarta.transaction.Transactional;
+
+@Service
+public class CustomerApplicationImpl implements CustomerApplicationService {
+	private static final Logger LOGGER = LoggerFactory.getLogger(CustomerApplicationImpl.class);
+
+	@Autowired
+	private CustomerApplicationRepository repository;
+	
+	@Autowired
+	private StorageService storage;
+
+	private CustomerApplicationMapper customerApplicationMapper;
+	
+	
+	@Transactional
+	@Override
+	public CustomerApplicationDto save(final CustomerApplicationDto customerApplication, MultipartFile[] files) {
+		LOGGER.debug("==> save customerApplication {} with documents {}", customerApplication, files);
+		
+		boolean applicationExists = repository.existsByEmail(customerApplication.email());
+		if(applicationExists) {
+			LOGGER.info("A customer application already exists, no need to process");
+			throw new ExistingCustomerException("A customer application already exists with email: "+customerApplication.email());
+		}
+		
+		try {
+			storage.saveFiles(files);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		// TODO Auto-generated method stub
+		// CustomerApplication newApplication = repository.save(customerApplicationMapper.dtoToEntity(customerApplication));
+		
+		return null;
+	}
+
+}

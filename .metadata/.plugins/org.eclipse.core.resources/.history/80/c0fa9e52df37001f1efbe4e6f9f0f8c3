@@ -1,0 +1,38 @@
+package com.testapp.onboarding_service.service.impl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.testapp.onboarding_service.dto.CustomerApplicationDto;
+import com.testapp.onboarding_service.exceptions.ExistingCustomerException;
+import com.testapp.onboarding_service.model.CustomerApplication;
+import com.testapp.onboarding_service.repository.CustomerApplicationRepository;
+import com.testapp.onboarding_service.service.CustomerApplicationService;
+import com.testapp.onboarding_service.service.StorageService;
+
+@Service
+public class CustomerApplicationImpl implements CustomerApplicationService {
+	private static final Logger LOGGER = LoggerFactory.getLogger(CustomerApplicationImpl.class);
+
+	@Autowired
+	private CustomerApplicationRepository repository;
+	
+	@Autowired
+	private StorageService storage;
+	
+	@Override
+	public CustomerApplication save(CustomerApplicationDto customerApplication) {
+		LOGGER.debug("==> save customerApplication {}", customerApplication);
+		
+		boolean applicationExists = repository.existsByEmail(customerApplication.email());
+		
+		if(applicationExists) {
+			throw new ExistingCustomerException("A customer application already exists with email: ");
+		}
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

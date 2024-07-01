@@ -29,6 +29,6 @@ public record CustomerApplicationDto(
 		@NotBlank
 		String applicantName,
 		@Email
-		String emailAddress) {
+		String email) {
 
 }

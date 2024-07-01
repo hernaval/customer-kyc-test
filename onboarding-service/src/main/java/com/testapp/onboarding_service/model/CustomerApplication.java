@@ -34,7 +34,7 @@ public class CustomerApplication {
 	private String directorName;
 	private String directorPassportNumber;
 	private String applicantName;
-	private String emailAddress;
+	private String email;
 	@CreationTimestamp
 	private Instant createdAt;
 	@UpdateTimestamp
@@ -63,7 +63,7 @@ public class CustomerApplication {
 		this.directorName = directorName;
 		this.directorPassportNumber = directorPassportNumber;
 		this.applicantName = applicantName;
-		this.emailAddress = emailAddress;
+		this.email = emailAddress;
 	}
 
 	public Long getId() {
@@ -163,11 +163,11 @@ public class CustomerApplication {
 	}
 
 	public String getEmailAddress() {
-		return emailAddress;
+		return email;
 	}
 
 	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
+		this.email = emailAddress;
 	}
 
 	public Instant getCreatedAt() {
